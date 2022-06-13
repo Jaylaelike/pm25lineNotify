@@ -106,7 +106,7 @@ while True:
                 currentHash = json.loads(res.text)
 
                 # wait for 30 second
-                time.sleep(15)
+                time.sleep(15) #10
                 continue
 
     # To handle exceptions
