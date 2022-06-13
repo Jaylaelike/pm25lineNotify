@@ -10,7 +10,7 @@ import pandas as pd
 
 
 # setting the URL you want to monito
-url = 'http://localhost:8086/query?pretty=true&db=pm_dht_map_data&q=SELECT "pm2p5","pm10","temp","humid","name" FROM "deviceD"  GROUP BY * ORDER BY DESC LIMIT 1'
+url = 'https://apidata.pm25vipa.tk/query?pretty=true&db=pm_dht_map_data&q=SELECT "pm2p5","pm10","temp","humid","name" FROM "databaseall"  GROUP BY * ORDER BY DESC LIMIT 1'
 
 # to perform a GET request and load the
 # content of the website and store it in a var
@@ -29,7 +29,7 @@ messenger = Sendline(token)
 
 def _getSendNotify():
 
-    url = 'http://localhost:8086/query?pretty=true&db=pm_dht_map_data&q=SELECT "pm2p5","pm10","temp","humid","name" FROM "deviceD"  GROUP BY * ORDER BY DESC LIMIT 1'
+    url = 'https://apidata.pm25vipa.tk/query?pretty=true&db=pm_dht_map_data&q=SELECT "pm2p5","pm10","temp","humid","name" FROM "databaseall"  GROUP BY * ORDER BY DESC LIMIT 1'
     res = requests.get(url)
     data = json.loads(res.text)
 
